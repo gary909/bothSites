@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom 2016 Armour Example</title>
+    <link rel="icon" type="image/x-icon" href="/oldImages/favicon.ico">
+    <script src="doomApp.js"></script>
+    <link rel="stylesheet" href="doomoldStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="introContainer">
+        <p>
+            <IMG SRC="images\DoomLogo.gif" alt="Doom Logo" class="responsive">
+        </p>
+    </div>
+
+    <div class="container">
+        <IMG SRC="oldImages/doomFaceGuy.gif" alt="Doom Guy" class="image"><br>
+        <label for="number1">Health:</label>
+        <input type="number" id="number1" placeholder="Set Health Amount"><br>
+
+        <label for="number2">Armour:</label>
+        <input type="number" id="number2" placeholder="Set Armour Amount"><br>
+
+        <label for="number3">Damage:</label>
+        <input type="number" id="number3" placeholder="Enter Enemy Damage"><br>
+
+        <button id="calculateButton">Enter</button><button id="resetButton" onClick="window.location.reload();">Reset</button>
+
+        <h2 id="result"></h2>
+        
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="https://digitalsunsetstudios.com/webdev.html" class="introContainer">BACK</a>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent">
+        <div class="cookie-container">
+            <p>This website uses cookies to ensure you get the best experience on our website. <a href="about.html#cookies-info">Learn more</a></p>
+            <div>
+                <button id="acceptCookies">Got it!</button>
+                <button id="declineCookies">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

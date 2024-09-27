@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Sunset Studios</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- First Splash Screen -->
+    <div id="splash1" class="splash">
+      <img src="DS_Floppy.png" alt="Splash Image" />
+    </div>
+
+    <!-- Second Splash Screen -->
+    <div id="splash2" class="splash2" style="display: none">
+      <div class="terminal">
+        <pre id="terminal-text">
+              <span data-line="/////////////////////////////////////////////////" class="line"></span>
+              <span data-line="AMI BIOS (C) Digital Sunset, Inc." class="line"></span>
+              <span data-line="Release Date: 02/15/1997" class="line"></span>
+              <span data-line="CPU: Intel Pentium MMX 200 MHz" class="line"></span>
+              <span data-line="Checking NVRAM......" class="line"></span>
+              <span data-line="Initializing USB Controllers ...... Done" class="line"></span>
+              <span data-line="Auto Detecting Primary Master..... WDC-00AUA1" class="line"></span>
+              <span data-line="Auto Detecting Secondary Slave..... CD-ROM Drive" class="line"></span>
+              <span data-line="Press DEL to enter Setup" class="line"></span>
+              <span data-line="Booting from CD-ROM ....." class="line"></span>
+              <span data-line="Starting MS-DOS....." class="line"></span>
+              <span data-line="C:\>" class="line"></span>
+              <span data-line="/////////////////////////////////////////////////" class="line"></span>
+          </pre>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none">
+      <!-- Your main page content goes here -->
+
+       <!-- Navigation Bar -->
+      <div class="nav-bar" id="nav-bar">
+        <div class="navbar-left">
+          <img src="/images/favicon.ico" alt="Logo" class="nav-logo" title="This is the website from Gary White"/>
+          <div class="nav-item">
+            <span>About</span>
+            <div class="dropdown">
+              <a href="#" id="about-link">About Me</a>
+              <a href="#" id="resume-link">Resumé</a>
+              <a href="#" id="contact-link">Contact</a>
+              <a href="#" id="cookies-link">Cookies</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>Web</span>
+            <div class="dropdown">
+              <a href="#" id="webdev-link">Webdev</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>VR</span>
+            <div class="dropdown">
+              <a href="#" id="vr-link">Projects</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span>Hardware</span>
+            <div class="dropdown">
+              <a href="#" id="hardware-link">Hardware</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navbar Right (time/date/fullscreen button) -->
+        <div class="navbar-right">
+          <!-- Fullscreen button -->
+          <button id="fullscreen-btn" class="fullscreen-btn">
+            <img
+              src="fullscreen_button.png"
+              alt="Fullscreen Button"
+              class="fullscreen-icon"
+              id="fullscreen-icon"
+            />
+            <span class="tooltip">Toggle fullscreen</span>
+            <!-- Tooltip text -->
+          </button>
+
+          <!-- Close Windows Button -->
+          <button id="close-windows-btn" class="close-windows-btn">
+            <img
+              src="close_window.png"
+              alt="Close Windows Button"
+              class="close-icon"
+              id="close-icon"
+            />
+            <span class="tooltip">Close all windows</span>
+            <!-- Tooltip text -->
+          </button>
+
+          <!-- Time and Date -->
+          <span class="time-date navbar-right" id="time-date"></span>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <!-- Draggable Icons -->
+
+      <!-- About Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/about.png"
+          alt="Info Icon"
+          id="info-icon"
+          class="icon"
+        />
+        <span id="about-text" class="icon-text">About</span>
+        <span class="tooltip">Learn more about me</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Hardware Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/hardwareIcon.png"
+          alt="Hardware Icon"
+          id="info-iconHrdwr"
+          class="icon"
+        />
+        <span id="hdwr-text" class="icon-text">Hardware</span>
+        <span class="tooltip">See my Hardware projects</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Web Dev Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/webDev.png"
+          alt="Webdev Icon"
+          id="info-iconWebDev"
+          class="icon"
+        />
+        <span id="webdev-text" class="icon-text">Web Dev</span>
+        <span class="tooltip">See my Web Dev projects</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- VR Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/vrIcon.png"
+          alt="VR Icon"
+          id="info-iconVR"
+          class="icon"
+        />
+        <span id="vr-text" class="icon-text">VR Stuff</span>
+        <span class="tooltip">See my VR work</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <br /><br />
+
+      <!-- Blog Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/blogIcon.png"
+          alt="Blog Icon"
+          id="info-iconBlog"
+          class="icon"
+        />
+        <span id="blog-text" class="icon-text">Blog-Shortcut</span>
+        <span class="tooltip">Opens Blog in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Github Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/gitIcon.png"
+          alt="Git Icon"
+          id="info-iconGit"
+          class="icon"
+        />
+        <span id="github-text" class="icon-text">Github-Shortcut</span>
+        <span class="tooltip">Opens Github in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- LinkedIn Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/linkedInIcon.png"
+          alt="LinkedIn Icon"
+          id="info-iconLinkIn"
+          class="icon"
+        />
+        <span id="lkdIn-text" class="icon-text">LinkedIn-Shortcut</span>
+        <span class="tooltip">Opens LinkedIn in a new page</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Minesweeper Icon -->
+      <div class="icon-container">
+        <img
+          src="/images/MsIcon.png"
+          alt="Minesweeper Icon"
+          id="info-iconMS"
+          class="icon"
+        />
+        <span id="ms-text" class="icon-text">Mine-Sweeper</span>
+        <span class="tooltip">Play a game!</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <br><br>
+      <!-- Trash Shortcut -->
+      <div class="icon-container">
+        <img
+          src="/images/trashIcon.png"
+          alt="Trash Icon"
+          id="info-iconTrash"
+          class="icon"
+        />
+        <span id="trash-text" class="icon-text">Trash</span>
+        <span class="tooltip">Opens the trash window</span>
+        <!-- Tooltip text -->
+      </div>
+
+      <!-- Draggable Windows -->
+
+      <!-- Info window contents (including more icons) -->
+      <div id="info-window" class="info-window info-window-size">
+        <div class="window-header" id="info-header">Information</div>
+        <span class="close-btn" id="info-close-btn">&times;</span>
+        <div class="window-body">
+          <!-- About Me Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/aboutMe.png"
+              alt="Learn more about me..."
+              id="info-iconAboutMe"
+              class="icon"
+            />
+            <span id="aboutMe-text" class="icon-text blackText">About Me</span>
+            <span class="tooltip">Opens the about me Page</span>
+          </div>
+
+          <!-- Resume Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/resumeIcon.png"
+              alt="Resume Icon"
+              id="info-iconResume"
+              class="icon"
+            />
+            <span id="resume-text" class="icon-text blackText">Resumé</span>
+            <span class="tooltip">Opens Resumé Page</span>
+          </div>
+
+          <!-- Contact ME Shortcut -->
+          <div class="icon-container">
+            <img
+              src="/images/contactIcon.png"
+              alt="Contact Icon"
+              id="info-iconContact"
+              class="icon"
+            />
+            <span id="contact-text" class="icon-text blackText">Contact</span>
+            <span class="tooltip">Opens Contact Page</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hardware window contents -->
+      <div id="info-window-hardware" class="info-window">
+        <div class="window-header" id="hrdwr-header">Hardware Projects: SYNTHESIZER & PCB DESIGN</div>
+        <span class="close-btn">&times;</span>
+          <div class="window-body">
+            <img
+            src="images/StringSynthCutOut3.png"
+            alt="Hardware image"
+            id="hdWrImage"
+            class="imageHdWr"
+          />
+          <p class="textTitle">Overview</p>
+          <p>
+            As well as software development I also like to
+            combine hardware with software. This mostly takes the form in
+            creating and designing synthesisers (electronic musical instruments).
+              In case you're wondering, I do have friends (and in real life to!).
+          </p>
+          <p>
+              The majority of these instruments are built using C++, the Mozzi audio
+              library, low cost Arduino development boards, and analog electronic
+              circuits.  These design I make open source (available via <a href="https://bloghoskins.blogspot.com/" target="_blank">my blog</a> and
+              <a href="https://github.com/gary909" target="_blank">GitHub)</a> and also publish instructions of how to make them for
+            beginners.
+          </p>
+          <p>
+            If I make a small run of units, I'll often create PCBs
+            using the Kicad software.
+          </p>
+          <p>
+            You can see a video example of the string synth <a href="https://www.youtube.com/watch?v=KQcI7oKE1pc" target="_blank">here.</a>
+          </p>
+          <img
+            src="images/CastlRck2.png"
+            alt="Modular Synth image"
+            class="imageHdWr3"
+          />
+          <!-- <img
+            src="images/Arduino_MIDI_Keyboard_plus_ARP.png"
+            alt="Synth breadboard image"
+            class="imageHdWr2"
+          /> -->
+          <img
+            src="images/pcbs_angled.png"
+            alt="printed circuit boards image"
+            class="imageHdWr3"
+          />
+          <br>
+        
+          <p class="subHeading">HELIOS ONE SYNTH</p>
+          <img
+            src="images/heliosOneAngled.png"
+            alt="DIY Helios Synth image"
+            class="imageHdWr"
+          />
+          <p class="textTitle">An Easy To Build Mono Synth</p>
+          <p>
+            I wanted to design an instrument that was easy to build, cheap to
+            make, and also fully playable and expressive. The result was the
+            Helios Mk One synth, which is possible to build for around $20.
+            Contructed using an Arduino Nano (programmed using C++) and the Mozzi
+            audio library, you can build a simple MIDI controlled mono synth with
+            a Filter, LFO and ADSR.
+            <br /><br />
+            The code is open source, and a fully illustrated build guide is
+            available. Many people have gone on to build this synth as their
+            introduction to synth DIY after it was posted in <a href="https://hackaday.com/2020/12/20/a-synth-of-your-own-for-not-a-lot/" target="_blank">Hackaday.</a>  Some have
+            gone on to modify the code and add extra functions.<br /><br />
+            You can watch some video examples of the synth <a href="https://www.youtube.com/watch?v=YTnBbq2hj9Q" target="_blank">here.</a> and read about the
+            code and build process <a href="https://bloghoskins.blogspot.com/p/20-synth.html" target="_blank">here.</a>
+          </p>
+          <p class="subHeading">ARDUINO SAMPLING DRUM PAD</p>
+          <img
+            src="images/ArduinoDrumKitGif.gif"
+            alt="DIY Arduino Drum Kit image"
+            class="imageHdWr"
+          />
+          <p class="textTitle">Arduino Drum Pad With Build Guide</p>
+          <p>
+            These drum pads allow you to upload your own audio samples and then
+            trigger them using the drum pads. One potentiometer allows you to
+            control the pitch of the sample, while the other control the volume.
+            The switch allows you to choose between 2 samples (more is not
+            possible due to the tiny memory size of the hardware). The drums were
+            built using the Mozzi audio library and an Arduino nano.<br /><br />
+            You can see a video example of the drum pads in action <a href="https://www.youtube.com/watch?v=zM8YlW-HCEM" target="_blank">here.</a> Or read
+            the full construction guide <a href="https://bloghoskins.blogspot.com/p/sampling-drum-pad.html" target="_blank">here.</a>
+          </p>
+          <p class="subHeading">SLEEP MEDITATION MACHINE</p>
+          <img
+            src="images/dowdowCloneGif.gif"
+            alt="DIY Dowdow clone image"
+            class="imageHdWr"
+          />
+          <p class="textTitle">Dodow Clone</p>
+          <p>
+            With this machine you sync your breathing to the pulse of the LEDs,
+            which gradually slow down over either a user selectable 15 or 30
+            minute runtime. At the end of the cycle, hopefully you'll be relaxed
+            enough to fall asleep.<br /><br />
+            Instructions for this build were published to <a href="https://www.instructables.com/DIY-Dodow-Clone-Arduino-Sleep-Meditation-Machine/" target="_blank">Intructables</a> where it
+            was entered for their Arduino Contest 2017.
+          </p>
+        </div>
+      </div>
+
+      <!-- Webdev window contents -->
+      <div id="info-window-webdev" class="info-window info-window-webdev">
+        <div class="window-header" id="webdv-header">Web Dev Projects</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <br>
+          <!-- <img
+            src="/images/webConnect.gif"
+            alt=""
+            id=""
+            class=""
+          /> -->
+          <!-- <img
+            src="/images/dolphinsWeb.gif"
+            alt=""
+            id=""
+            class=""
+          /> -->
+          <img
+            src="/images/dancingBaby.gif"
+            alt="A dancing Baby"
+            class="imageWebDev"
+          />
+          <p class="textTitle">Overview</p>
+          <p>Here you'll find a variety of different web dev projects that I've created over the years, from responsive pages to API-driven applications. <br><br> 
+            In my career and studies I've used the following technologies: React, JavaScript, HTML, CSS, Postman, RESTful APIs, Node.js, Express.js, MongoDB, Bootstrap, jQuery, and Angular. 
+          </p>
+          <br>
+          <p class="subHeading">Doom Armour Calculator</p>
+          <br>
+          <img
+            src="/images/doomAppMov.gif"
+            alt="Doom calc App Gif"
+            class="imageWebDev2"
+          />
+          <p class="textTitle">Efficient Calculations</p>
+          <p>What better way to encapsulate the famously fun 1993 3d game but in a 2d webpage?  And maths.</p>
+          <p>
+            For one of my VR projects I needed an efficient way to calculate the
+            amount of hit points removed from both your health total, and if you
+            have any, your armour total. <br /><br /> Points should be removed from the armour
+            amount first, and then the health. So if you have 100 health, 20
+            Armour, and a hit point is worth 30, you should be left with 90 health
+            and 0 armour. Does that make sense?? <br /><br />
+            The page is responsive & was created using pure HTML, CSS &
+            JavaScript. You can try it <a href="https://digitalsunsetstudios.com/doomApp.html" target="_blank">out here. </a> <br /><br />
+            You can see the full code over on <a href="https://github.com/gary909/Kata/tree/main/armourExample" target="_blank">GitHub.</a>
+          </p>
+          <br />
+          <p class="subHeading">Weather App</p>
+          <img
+          src="/images/weatherAppGif.gif"
+          alt="Weather App Gif"
+          class="imageWebDev2"
+          />
+          <p class="textTitle">API Connected weather App</p>
+          <p>
+            Cirrusly, why look out the window when you can use a computer?  Unless I've mist something?<br /><br /> Here we're grabbing the weather results from the user selected location.
+            As well as returning the weather, we're also offering advice on
+            the appropriate atire (which is responsive depending on the
+            returned tempturature).<br /><br />
+            We're making use of the openweathermap.org API to return these
+            results.<br /><br />
+            You can see the full code over on <a href="https://github.com/gary909/WeatherApp/tree/main" target="_blank">GitHub.</a>
+          </p>
+          <br />
+          <p class="subHeading">Audiogram</p>
+          <img
+            src="/images/audiogramGIF.gif"
+            alt="Audiogram Gif"
+            class="imageWebDev2"
+          />
+          <p class="textTitle">Audio Recording Social Media App</p>
+          <p>
+            The audio-sharing social-network. The world definitly needs more social media!<br /><br /> In this app, user is limited to 10 seconds
+            recording time and doesn't have the ability to delete their messages.
+            It also features a secure log-in and the option to post replies on other users
+            recordings.<br /><br />
+            Interestingly the app 'Clubhouse' was released a year after this, but allowed
+            the user to record 30 second messages.  It was valued at $100 million, sadly this app has yet to be valued at anything.<br /><br />
+            This was our final project as part of the Ironhack Berlin Web Dev
+            course. It was built using the following;<br /><br />
+            React, Node.js, Express.js, MongoDB, Bootstrap, HTML & CSS<br /><br />
+            You can see the full code over on <a href="https://github.com/gary909/audiogramm" target="_blank">GitHub.</a>
+          </p>
+          <br>
+          <p class="subHeading">Pets Of Berlin App</p>
+          <img
+            src="/images/PetsOfBerlinGif.gif"
+            alt="Pets of Berlin Gif"
+            class="imageWebDev2"
+          />
+          <p class="textTitle">Location Based Pet Breeding App</p>
+          <p>Hopefully you won't find this app to boar-ing...</p>
+          <p>
+            Help your guinea pig to find new friends and breeding partners. This
+            website was built as our second project for the Ironhack Berlin web
+            development bootcamp.<br /><br />
+            Create a secure account and then tag your location and let other users
+            see your animals details.<br /><br />
+            It primarily uses the Google Maps API and was built using Node.js,
+            Express.js, MongoDB, jQuery, Bootstrap, HTML & CSS<br /><br />
+            You can see the full code over on <a href="https://github.com/sylviebe/pets-of-berlin" target="_blank">GitHub.</a>
+          </p>
+          <br><br>
+          <p class="subHeading">To Do List</p>
+          <img
+            src="/images/todoApp.gif"
+            alt="To Do List Gif"
+            class="imageWebDev2"
+          />
+          <p class="textTitle">Angular TODO List App</p>
+          <p>
+            This is a classic 'TODO' list app that was created using Angular and
+            using the JSON placeholder API to gather the TODOs.<br /><br />
+            You can see the full code over on <a href="https://github.com/gary909/angular-todolist" target="_blank">GitHub.</a>
+          </p>
+          <br><br>
+          <p class="subHeading">Brexit Game</p>
+          <img
+          src="/images/BrexitGameGif2.gif"
+          alt="Brexit Game Gif"
+          class="imageWebDev2"
+          />
+          <p class="textTitle">Phaser Fun</p>
+          <p>
+            The game you can't win!<br><br> Designed to be overly-complicated, you need to
+            decide if the anti-EU headline is true or false by collecting a 'yes'
+            or 'no' tick, all the while balancing public anger and gullibility by
+            collecting pints of beer. Every correct guess spawns an English flag
+            which if you accidentally collect will end the game ("Avoid
+            Nationalism!").<br /><br />
+            This game was created using the Phaser library and Javascript for the
+            first project of Ironhack Berlin.<br /><br />
+            You can see the code over on <a href="https://github.com/gary909/BrexitGame" target="_blank">GitHub.</a>
+          </p>
+          <br><br>
+          <img
+            src="/images/enoughWebToday.gif"
+            alt="that's enough internet for you!"
+            class="imageWebDev2"
+          />
+        </div>
+      </div>
+
+      <!-- VR window contents -->
+      <div id="info-window-vr" class="info-window info-window-vr">
+        <div class="window-header" id="vr-header">VR Works</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img
+            src="/images/vrGif.gif"
+            alt="90's vr gif"
+            class="imageVR"
+          />
+          <p class="textTitle">Overview</p>
+          <p>Here you'll find some Information about some of my VR projects.  They were
+            created using the Unity game engine software, many tears, and programmed using C#.
+          </p>
+          <br><br>
+          <p class="subHeading">VR DRIVIN'</p>
+          <video loading="lazy" width="85%" poster="images/VRdriveGif.gif" controls alt="VR Drivin video" title="Click to play" class="imageVR">
+            <source src="images/vrDrivin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="textTitle">A Fan Remake Of The 80's Classic Driving Game</p>
+          <p>Hard Drivin was released by Atari Games way back in 1989, and this is 
+            my attempt to bring it over into VR.<br><br> I was a big fan of the original, 
+            however I'd only ever experienced it at 12 frames per second on the Sega 
+            Mega Drive. Thanks to modern hardware, this version is currently 
+            running a lot quicker than 12fps.<br><br> The 3d models were all built within 
+            Unity and any more detailed graphics (roadsign text, hedges etc) were 
+            creating using Affinity Designer, then heavily compressed before being 
+            imported.<br><br> There's still much more work to be completed (like finishing 
+            the track!), however this demo certainly conveys the speed and the 
+            handling of the Arcade original.<br><br> Click the GIF to view the full length 
+            video.
+          </p>
+          <br>
+          <p class="subHeading">FISH TANK VR</p>
+          <video loading="lazy" width="85%" poster="images/FishGif.gif" controls alt="Fish Tank VR video" class="imageVR">
+            <source src="images/aquariumVR.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="textTitle">Interactable Aquarium Environment</p>
+          <p>Click the GIF for higher quality video.<br><br>This project wasn't a turtle disaster!  Although if you don't think it's fintastic, let minnow...
+            <br><br> A reddit user asked about a VR 
+            Aquarium experience, and seeing as there aren't many results I set about 
+            creating the Fish Tank VR demo. <br><br>The demo starts with a menu screen, 
+            which when prompted takes you into an elevator. From there you make your 
+            way across a brutalist enviroment towards and interactable aquarium. 
+            Using Push buttons, the user can learn about more about the fish contained 
+            within. <br><br>This is currently only a proof of concept, although I'd like 
+            to develop it into a full experience with more fish and larger aquariums.
+            <br><br>The demo features buttons, animated doors, water caustics effects, 
+            volumetric light beams, dust particles (using Unitys particle system) and 
+            mostly baked lighting (using Bakery) to keep the frame rate high.
+          </p>
+          <br>
+          <p class="subHeading">XR TERRA WORK</p>
+          <video loading="lazy" width="85%" poster="images/xrTerraGif.gif" controls alt="XR Terra Classwork" title="Click to play" class="imageVR">
+            <source src="images/XrTerra.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <p class="textTitle">VR interactions and locomotion</p>
+          <p>Click the GIF for higher quality video.<br><br> XR Terra is an online training 
+            platform who offer live classroom training in VR. I took part in their VR 
+            Developer Foundations 4 week course, and this was the result. Using Unity, 
+            C# and VR toolkits and libraries we created a scene with VR interactions 
+            and locomotion, also utilising Animations, character controllers and movement.<br><br> 
+            In the video here (please click to play), you can see the interactable control 
+            panel which is also grabable, this triggers an animation that leads to the 
+            creation of an object. This object can then be assigned a material and then 
+            using another button, destroyed with particle effects. Another level controls 
+            the poistion of the sun, changing the scenes lighting.<br><br> You can also pick up 
+            and eat half an apple :-)
+          </p>
+          <br>
+          <p class="subHeading">AUGMENTED REALITY</p>
+          <img
+          src="/images/AR_Car.gif"
+          alt="Augmented reality app"
+          class="imageVR"
+          />
+          <p class="textTitle">Interacting With The Real World</p>
+          <p>Although VR is my main focus, I'm also interested in experimenting with Augmented 
+            Reality within Unity's AR Foundation Package.</p>
+          <p>In the GIF shown here, I'm utilising the mobile phones camera to detect the ground 
+            plane, then tracking the position of the 3d model around this result.</p>
+          <br>
+          <p class="subHeading">2D SIDE SCROLLER</p>
+          <img
+            src="/images/SupCherGhoGif.gif"
+            alt="2d side scrolling game"
+            class="imageVR"
+          />
+          <p class="textTitle">A Super Mario Clone</p>
+          <p>Not everything is in VR! While learning Unity it's almost compulsory 
+            to make a Mario-like 2D side scrolling game. Mine one's called 'Super 
+            Cherry Ghost.'
+          </p>
+          <p>Built using the Corgi Engine within Unity, I was quickly able to create a functional 
+            prototype complete with paralax backgrounds and enemies.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Minesweeper window contents -->
+      <div id="info-window-ms" class="info-window msWindow">
+        <div class="window-header" id="ms-header">Minesweeper</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body bodyMS">
+          <div id="minesweeper"></div>
+          <button id="resetButton">Reset Game</button>
+        </div>
+      </div>
+
+      <!-- Cookie window contents -->
+      <div id="info-window-cookies" class="info-window info-window-cookies">
+        <div class="window-header" id="cookies-header">Cookies</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img
+          src="/images/dialing.gif"
+          alt="Accept cookies..."
+          class="cookiesImg"
+          />
+          <p>Hi!</p>
+          <p>This site shouldn't use any cookies, but you never know if uncle Google is listening.  I can also understand you not trusting 
+            a stranger on the internet.  If that's the case, feel free to leave to a somewhat nicer site...
+          </p>
+          <br>
+          <button id="stay-btn" class="buttonCookie">Stay</button>
+          <button id="leave-btn" class="buttonCookie">Leave</button>
+        </div>
+      </div>
+
+      <!-- Trash window contents -->
+      <div id="info-window-trash" class="info-window info-window-trash">
+        <div class="window-header" id="trash-header">Trash</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <div class="icon-container">
+            <img
+              src="/images/oldSite.png"
+              alt="View the old website..."
+              id="info-iconOldSite"
+              class="icon"
+            />
+            <span id="aboutMe-text" class="icon-text blackText">Old Site</span>
+            <span class="tooltip">Opens a new window to the old site</span>
+          </div>
+          <div class="icon-container">
+            <img
+              src="/images/blank.png"
+              alt="Empty the trash..."
+              id="info-iconEmptyTrash"
+              class="icon"
+            />
+            <span id="emptyTrash-text" class="icon-text blackText">Empty-Trash</span>
+            <span class="tooltip">Empty Trash</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty Trash window contents -->
+      <div id="info-window-emptyTrash" class="info-window emptyTrashWindow">
+        <div class="window-header" id="emptyTrash-header">The King</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img
+            src="/images/nedry.gif"
+            alt="Password required..."
+            class="emptyTrashImage"
+          />
+        </div>
+      </div>
+
+      <!-- AboutME window contents -->
+      <div id="info-window-aboutMe" class="info-window">
+        <div class="window-header" id="aboutMe-header">About Me</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <img
+            src="images/GHck5.jpg"
+            alt="The big man"
+            id="image"
+            class="imageAboutMe"
+          />
+          <!-- <img
+            src="images/DigitalSunsetLogo.png"
+            alt="logo"
+            class="imageGif"
+          /> -->
+          <p class="textTitle">Overview</p>
+          <p>
+            Hi, I'm Gary! Digital Sunset Studios is the name I work under for my
+            various software projects. Here you'll find infomation and links to my
+            Virtual Reality projects, hardware projects and Web Development
+            projects.
+          </p>
+          <p>
+            In 2013 I first started playing with electronics, then after winning a
+            Google programming scholarship I started to combine this with software
+            programming.
+          </p>
+          <img
+            src="images/VR_Comp.gif"
+            alt="compilation of software gif"
+            class="imageAboutMe2"
+          />
+          <p>
+            After taking an intensive 9-week Web Dev bootcamp in 2019, I have been
+            working as a full-time web developer. But at night, I put on my VR
+            goggles and work on my various VR projects. I also like to create and
+            program hardware synthesizers for fun.
+          </p>
+          <p>I currently live in Leipzig, Germany.</p>
+          <br />
+          <a
+            href="https://bloghoskins.blogspot.com/"
+            style="text-decoration: none"
+            class="textTitle"
+            target="_blank"
+            >Selected Quotes From My Blog:</a
+          ><br /><br>
+          <!-- blog intro linkl -->
+          <!-- blog text carousel -->
+          <div class="fade-container">
+            <p id="sentence">Sentence 1</p>
+          </div>
+          <br />
+          
+          <!-- Software  Used -->
+          <p class="subHeading">Software</p>
+          <p>Here's some of the software I use to develop with:</p>
+          <ul>
+            <li>
+              <b style="color: #0101CA;">Webdesign:</b> Javascript, HTML 5, CSS3, React, Node.js, Express.js, MongoDB, Bootstrap, POSTman,
+              Github/Command Line, API's, Visual Studio Code
+            </li>
+            <br />
+            <li>
+              <b style="color: #0101CA;">Hardware:</b> Arduino IDE, C++, kiCad (PCB Design Software),
+              Mozzi Audio Library, FortySevenEffects MIDI Library, Analog/Digital
+              circuits
+            </li>
+            <br />
+            <li>
+              <b style="color: #0101CA;">VR:</b> Unity, C#, Visual Studio, Blender, Meta Quest Dev Hub.
+              Unity Assets: Probuilder, Bakery GPU Lightmapper, VR Interaction
+              Framework + more
+            </li>
+            <br />
+            <li>
+              <b style="color: #0101CA;">Design/Creation:</b> Affinity Designer, Affinity Photo, Affinity
+              Publisher, Photoshop, After Effects, Adobe XD, Audacity, FL Studio,
+              Vegas Movie Studio
+            </li>
+          </ul>
+          <br />
+          
+          <!-- Education Table below -->
+          <p class="subHeading">Education</p>
+          
+          <p>Schools I've attended:</p>
+          <!-- big Table of School -->
+          <table class="centerEdu">
+            <tr>
+              <th class="paddingEdu">Year</th>
+              <th>School</th>
+              <th>Course</th>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td class="leftEdu paddingEdu">XR Terra</td>
+              <td class="leftEdu paddingEdu">
+                4-week XR Foundations Developer (VR)
+              </td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td class="leftEdu paddingEdu">Ironhack, Berlin</td>
+              <td class="leftEdu paddingEdu">9-week Web Development Bootcamp</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td class="leftEdu paddingEdu">Udacity</td>
+              <td class="leftEdu paddingEdu">
+                Android Development, Scholarship funded by Google
+              </td>
+            </tr>
+            <tr>
+              <td>2013/4</td>
+              <td class="leftEdu paddingEdu">
+                International Correspondence Schools
+              </td>
+              <td class="leftEdu paddingEdu">
+                Bachelor of Technology (BTECH Level 3) Electronic Engineering
+              </td>
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td class="leftEdu paddingEdu">BSI Language School Berlin</td>
+              <td class="leftEdu paddingEdu">
+                Intensive Language Course (German)
+              </td>
+            </tr>
+            <tr>
+              <td>2007</td>
+              <td class="leftEdu paddingEdu">St. Martin's College, London</td>
+              <td class="leftEdu paddingEdu">
+                Introduction To Maya (Short Course)
+              </td>
+            </tr>
+            <tr>
+              <td>98/2001</td>
+              <td class="leftEdu paddingEdu">
+                Amersham & Wycombe College, Bucks
+              </td>
+              <td class="leftEdu paddingEdu">
+                Bachelor of Technology (BTECH) Sound Engineeering with Music
+                Technology (GNVQ)
+              </td>
+            </tr>
+            <tr>
+              <td>1997/8</td>
+              <td class="leftEdu paddingEdu">
+                Amersham & Wycombe College, Bucks
+              </td>
+              <td class="leftEdu paddingEdu">GNVQ in Art and Design</td>
+            </tr>
+          </table>
+          <br>
+          <!-- blog text carousel -->
+          <p class="subHeading">Qualifications</p>
+          <p>Various qualifications I've gained:</p>
+          <!-- Container (About Section) -->
+          <table class="centerCourses">
+            <tr>
+              <th>Date</th>
+              <th>Course Name</th>
+              <th>Provider</th>
+            </tr>
+            <tr>
+              <td>June 2023</td>
+              <td>Augmented Reality 101</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>June 2023</td>
+              <td>Intro to Particle Systems for Games</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>March 2023</td>
+              <td>XR Foundations Developer</td>
+              <td>XR Terra</td>
+            </tr>
+            <tr>
+              <td>February 2023</td>
+              <td>Discover the XR Interaction Toolkit for VR</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>The Complete 2023 Web Dev Bootcamp</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Create Your First 3D Game in Unity</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Mobile Game Development for Beginners</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Learn the Entire Affinity Suite: Photo, Designer & Publisher</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>January 2023</td>
+              <td>Unity Mini-Projects - C# Fundamentals</td>
+              <td>Zenva Academy</td>
+            </tr>
+            <tr>
+              <td>Sept 2022</td>
+              <td>Data Privacy Training Basic</td>
+              <td>Proliance</td>
+            </tr>
+            <tr>
+              <td>August 2021</td>
+              <td>Build The Game Of Life</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2021</td>
+              <td>Complete SEO Training 2021</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>June 2021</td>
+              <td>Generative Music Box Project</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>May 2021</td>
+              <td>Building Your First VR Experience With Unity</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>Sept 2019</td>
+              <td>XD/DC - Adobe XD Workshop Tour</td>
+              <td>XD/DC</td>
+            </tr>
+            <tr>
+              <td>August 2019</td>
+              <td>SEO Training</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>May 2019</td>
+              <td>Ironhack 9-Week Web Development Bootcamp</td>
+              <td>Ironhack</td>
+            </tr>
+            <tr>
+              <td>August 2019</td>
+              <td>Angular Front To Back</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2019</td>
+              <td>UX, UI and Design Thinking</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>July 2017</td>
+              <td>Android Basics Nanodegree by Google</td>
+              <td>Udemy</td>
+            </tr>
+            <tr>
+              <td>March 2016</td>
+              <td>AlgebraX: Introduction to Algebra</td>
+              <td>EdX</td>
+            </tr>
+            <tr>
+              <td>November 2015</td>
+              <td>EE40LX: Electronic Interfaces: Bridging the Physical and Digital Worlds</td>
+              <td>EdX Berkeley</td>
+            </tr>
+          </table>
+          <br>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume window contents -->
+      <div id="info-window-resume" class="info-window resumeWindow">
+        <div class="window-header" id="resume-header">Resume</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <h3>Thanks for the interest...</h3>
+          <p class="contactMeText">
+            You can download a copy of my resumé by <a href="/files/Temp_Gary_White_Resume_2024.pdf" download> clicking here.</a>
+          </p>
+          <br>
+          <div>
+            <a href="/files/Temp_Gary_White_Resume_2024.pdf" download>
+              <img src="images/downloadingGIF.gif" alt="Download Resume" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact window contents -->
+      <div id="info-window-contact" class="info-window contactWindow">
+        <div class="window-header" id="contact-header">Contact Me</div>
+        <span class="close-btn">&times;</span>
+        <div class="window-body">
+          <h3>Get In Touch...</h3>
+          <p class="contactMeText">
+            Contact me via
+            <a
+              href="https://www.linkedin.com/in/gary-white-3a779a51/"
+              target="_blank"
+              >LinkedIn</a
+            >.
+          </p>
+          <br /><br />
+          <div>
+            <img class="contactImage" src="images/emailGIF.gif" alt="Email Me" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="images/clippy.gif" alt="Clippy" class="clippy-gif" id="clippyGif" />
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

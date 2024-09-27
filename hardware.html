@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sunset Studios</title>
+    <link rel="icon" type="image/x-icon" href="/oldImages/favicon.ico">
+    <link rel="stylesheet" href="oldStyles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+   <!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="oldIndex.html" class="w3-bar-item w3-button NaVFontCol">HOME</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>WEB</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol">ABOUT</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      </a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="portfolio.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">WEB</a>
+      <a href="about.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">ABOUT</a>     
+    </div>
+  </div>
+
+  <div id="home"><br><br></div>
+
+  
+  <!-- First Parallax Image with Logo Text -->
+  <div loading="eager" class="bgimg-3 w3-display-container w3-opacity-min" alt="Digital Sunset Studios Projects" title="Digital Sunset Studios Projects">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-animate-opacity">HARDWARE PROJECTS<span class="w3-hide-small"></span></span>
+    </div>
+  </div>
+
+      
+  <!-- Container (Synth Design Section) -->
+  <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+    <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">SYNTHESIZER & PCB DESIGN</h3>
+    <p class="w3-center"><em>Other Hobbies...</em></p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <img width="100%" src="oldImages/StringSynthCutOut.png" alt="DIY String Synth with Analog Filter" title="DIY String Synth with Analog Filter">
+      </div>
+    
+        <!-- Do Not Hide this text on small devices -->
+        <div class="w3-col m6 w3-padding-large">
+          <p>As well as software development I also have a deep passion for combining hardware with software.  This mostly takes the form in creating and designing synthesisers (electronic musical instruments).</p>
+          <p>The majority of these instruments are built using C++, the Mozzi audio library, low cost Arduino development boards, and analog electronic circuits. 
+            The designs of which I make open source (available via <a href="https://bloghoskins.blogspot.com/" target=”_blank”>my blog</a> and <a href="https://github.com/gary909" target=”_blank”>GitHub</a>) and also publish instructions of how to make them for beginners.</p>
+          <p>If I make a small run of units, I'll often create PCBs using the Kicad software.</p>
+          <p>You can see a video example of the <a href="https://youtu.be/KQcI7oKE1pc" target=”_blank”>string synth here</a></p>
+        </div>
+      </div>
+      <br>
+
+
+          <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+          <div class="w3-row-padding w3-center w3-hide-small w3-hide-medium">
+            <div class="w3-col m3">
+              <img loading="lazy" src="oldImages/heliosOneAngled.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="DIY Mono Synth" title="DIY Mono Synth">
+            </div>
+        
+            <div class="w3-col m3">
+              <img loading="lazy" src="oldImages/CastlRck.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="A little Modulor Synth" title="A little Modulor Synth">
+            </div>
+        
+            <div class="w3-col m3">
+              <img loading="lazy" src="oldImages/Arduino_MIDI_Keyboard_plus_ARP.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="MIDI Keyboard Layout" title="MIDI Keyboard Layout">
+            </div>
+        
+            <div class="w3-col m3">
+              <img loading="lazy" src="oldImages/pcbs_angled.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="Printed Circuit Boards" title="Printed Circuit Boards">
+            </div>
+          </div>
+          <br>
+      </div>
+
+      <!-- Container (HELIOS ONE SECTION) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">HELIOS ONE SYNTH</h3>
+        <p class="w3-center"><em>An Easy To Build Mono Synth</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <br>
+            <img loading="lazy" src="oldImages/heliosOneAngled.png" alt="DIY Mono Synth" title="DIY Mono Synth" width="90%">
+          </div>
+        
+            <!-- Do Not Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>I wanted to design an instrument that was easy to build, cheap to make, and also fully playable and expressive. The 
+                result was the Helios Mk One synth, which is possible to build for around $20. Contructed using an Arduino Nano 
+                (programmed using C++) and the Mozzi audio library, you can build a simple MIDI controlled mono synth with a Filter, LFO and ADSR.</p>
+              <p>The code is open source, and a fully illustrated build guide is available.  Many people have gone on to build this
+                 synth as their introduction to synth DIY after it was posted in <a href="https://hackaday.com/2020/12/20/a-synth-of-your-own-for-not-a-lot/" target=”_blank”>Hackaday</a>. Some have gone on to modify the code and add extra functions.
+              </p>
+              <p>You can watch some video examples <a href="https://youtu.be/YTnBbq2hj9Q" target=”_blank”>of the synth here</a> and 
+              read about the code and build process <a href="https://bloghoskins.blogspot.com/p/20-synth.html" target=”_blank”>here</a>.</p>
+          </div>
+          <br>
+
+
+        <!-- Container (DRUM PADS Section) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">ARDUINO SAMPLING DRUM PAD</h3>
+        <p class="w3-center"><em>Arduino Drum Pad With Build Guide</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <br>
+            <img loading="lazy" src="oldImages/ArduinoDrumKitGif.gif" alt="Auduino Sampling Drumpad" title="Auduino Sampling Drumpad" width="90%">
+          </div>
+        
+            <!-- Do Not Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>These drum pads allow you to upload your own audio samples and then trigger them using the drum pads. One potentiometer
+                allows you to control the pitch of the sample, while the other control the volume.  The switch allows you to choose between
+                2 samples (more is not possible due to the tiny memory size of the hardware).  The drums were built using the Mozzi audio library
+                and an Arduino nano.
+              </p>
+              <p>You can see a video example of the <a href="https://www.youtube.com/watch?v=zM8YlW-HCEM&ab_channel=gary909" target=”_blank”>drum pads in action here</a>. Or read the full <a href="https://bloghoskins.blogspot.com/p/sampling-drum-pad.html" target=”_blank”>construction guide here</a>. </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- Container (DOWDOW CLONE Section) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">SLEEP MEDITATION MACHINE</h3>
+        <p class="w3-center"><em>Dodow Clone</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <br>
+            <img loading="lazy" width="80%" src="oldImages/dowdowCloneGif.gif" alt="Sleep Meditation Machine" title="Sleep Meditation Machine">
+          </div>
+        
+            <!-- Do Not Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>With this machine you sync your breathing to the pulse of the LEDs, which gradually slow down over either a user selectable 15 or 
+                30 minute runtime.  At the end of the cycle, hopefully you'll be relaxed enough to fall asleep.
+              </p>
+              <p>Instructions for this build were <a href="https://www.instructables.com/DIY-Dodow-Clone-Arduino-Sleep-Meditation-Machine/" target=”_blank”>published to Intructables</a> where it was entered for their Arduino Contest 2017.</p>
+            </div>
+          </div>
+          <br><br>
+      </div>
+
+          
+      </div>
+      
+
+    </div>
+
+        <!-- Container (Example Projects) -->
+        <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+          <div class="animImgDiv">
+            <div class="flex-container">
+              <div>
+                <a href="portfolio.html"><img src="oldImages/VR_Link.png" style="--f:.12;--r:1%" class="imgAnim" alt="VR projects link" title="Open VR projects page"></a>
+              </div>
+              <div>
+                <a href="hardware.html"><img src="oldImages/hard_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Hardware projects link" title="Open Hardware projects page"></a>
+              </div>
+              <div>
+                <a href="webdev.html"><img src="oldImages/webdev_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Web Dev projects link" title="Open Web Dev projects page"></a>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <br><br>
+      </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 ">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <a class="w3-hover-opacity" target="_blank" href="https://bloghoskins.blogspot.com/"> <img src="oldImages/bloggerIcon.png" width="20.58" height="24" alt="blogspot icon" title="Link to Blog"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://github.com/gary909"> <img src="oldImages/github-mark-white.svg" width="23" height="23" alt="blogspot icon" title="Link to GitHub"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://www.codewars.com/users/gary909"> <img src="oldImages/codewars_icon.png" width="23" height="23" alt="Codewars icon" title="Link to Codewars"></a>
+      <a class="fa fa-linkedin w3-hover-opacity" target="_blank" href="https://www.linkedin.com/in/gary-white-3a779a51/" alt="LinkedIn icon" title="LinkedIn Link"></a>
+
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookieConsent">
+    <div class="cookie-container">
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="about.html#cookies-info">Learn more</a></p>
+        <div>
+            <button id="acceptCookies">Got it!</button>
+            <button id="declineCookies">No</button>
+        </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

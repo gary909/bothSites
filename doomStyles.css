@@ -1,0 +1,90 @@
+body {
+  font-family: "VT323", monospace;
+  background-image: url("oldImages/doomBGfhd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set the height to fill the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0;
+}
+
+.introContainer {
+  text-align: center;
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Set the background color to be transparent */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the alpha value here for the box shadow transparency */
+  margin-top: 40px;
+}
+
+.responsive {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+input[type="number"] {
+  font-family: "VT323", monospace;
+  width: 65%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  font-family: "VT323", monospace;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Set display to none for image*/
+.image {
+  width: 20%;
+  height: auto;
+  margin: 10px;
+}
+
+/* Bottom Nav Bar */
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  /*float: left;*/
+  text-align: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}

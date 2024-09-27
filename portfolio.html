@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sunset Studios</title>
+    <link rel="icon" type="image/x-icon" href="/oldImages/favicon.ico">
+    <link rel="stylesheet" href="oldStyles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="oldIndex.html" class="w3-bar-item w3-button NaVFontCol">HOME</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>WEB</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol">ABOUT</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"></a>
+      </a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="portfolio.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">WEB</a>
+      <a href="about.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">ABOUT</a>
+    </div>
+  </div>
+
+  <div id="home"><br><br></div>
+
+  
+  <!-- First Parallax Image with Logo Text -->
+  <div loading="eager" class="bgimg-2 w3-display-container w3-opacity-min" alt="Digital Sunset Studios Projects" title="Digital Sunset Studios Projects">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-animate-opacity">VR PROJECTS<span class="w3-hide-small"></span></span>
+    </div>
+  </div>
+
+
+  <!-- Container (FISH TANK VR) -->
+  <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+    <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">FISH TANK VR</h3>
+    <p class="w3-center"><em>Interactable Aquarium Environment</em></p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <br>
+        <video width="85%" poster="oldImages/FishGif.gif" controls>
+          <source src="oldImages/aquariumVR.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+  
+      <!-- Do not Hide this text on small devices -->
+      <div class="w3-col m6 w3-padding">
+        <p><b>Click the GIF for higher quality video</b>. A reddit user asked about a VR Aquarium experience, and seeing as there aren't many results I set about creating the Fish Tank VR demo.</p>
+        <p>The demo starts with a menu screen, which when prompted takes you into an elevator.  From there you make your way across a brutalist enviroment towards and interactable aquarium. Using Push buttons, the user can learn about more about the fish contained within.</p>
+        <p>This is currently only a proof of concept, although I'd like to develop it into a full experience with more fish and larger aquariums.</p>
+        <p>The demo features buttons, animated doors, water caustics effects, volumetric light beams, dust particles (using Unitys particle system) and mostly baked lighting (using Bakery) to keep the frame rate high.</p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Hide This on Mobile -->
+      <!-- Hide This on Mobile Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center w3-hide-small w3-hide-medium">
+        <div class="w3-col m3">
+          <img src="oldImages/FishTank.png" width="217" height="135" onclick="onClick(this)" class="w3-hover-opacity" alt="VR Aquarium setting" title="VR Aquarium setting">
+        </div>
+    
+        <div class="w3-col m3">
+          <img src="oldImages/fishTank2.png" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Aquarium Corridor" title="VR Aquarium Corridor">
+        </div>
+    
+        <div class="w3-col m3">
+          <img src="oldImages/fishTank3.png" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Aquarium Lift" title="VR Aquarium Lift">
+        </div>
+    
+        <div class="w3-col m3">
+          <img src="oldImages/fishTankIntro.png" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Aquarium Start Scene" title="VR Aquarium Start Scene">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    </div>
+  
+      <!-- Container (VR Drivin Section) -->
+      <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">VR DRIVIN'</h3>
+        <p class="w3-center"><em>A Fan Remake Of The 80's Classic Driving Game</em><br>
+    
+
+      <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <br>
+            <video loading="lazy" width="85%" poster="oldImages/VRdriveGif.gif" controls alt="VR Drivin video" title="Click to play">
+              <source src="oldImages/vrDrivin.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+      
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-small">
+              <p>Hard Drivin was released by Atari Games way back in 1989, and this is my attempt to bring it over into VR.</p>
+              <p>I was a big fan of the original, however I only ever experienced it at 12 frames per second on the Sega Mega Drive.  Thanks to modern hardware, this version is currently running a lot quicker than 12fps.</p>
+              <p>The 3d models were all built within Unity and any more detailed graphics (roadsign text, hedges etc) were creating using Affinity Designer, then heavily compressed before being imported.</p>
+              <p>There's still much more work to be completed (like finishing the track!), however this demo certainly conveys the speed and the handling of the Arcade original.</p>
+              <p><b>Click the GIF to view the full length video.</b></p>
+              <br>
+            </div>
+            
+        </div>
+            <!-- Hide This on Mobile -->
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div class="w3-row-padding w3-center w3-hide-small w3-hide-medium">
+              <div class="w3-col m3">
+                <img loading="lazy" src="oldImages/VrDrivin1.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Drivin Start View" title="VR Drivin Start View">
+              </div>
+          
+              <div class="w3-col m3">
+                <img loading="lazy" src="oldImages/VrDrivin2.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Drivin Roadside Barn and Cow" title="VR Drivin Roadside Barn and Cow">
+              </div>
+          
+              <div class="w3-col m3">
+                <img loading="lazy" src="oldImages/VrDrivin3.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Drivin Bridge" title="VR Drivin Bridge">
+              </div>
+          
+              <div class="w3-col m3">
+                <img loading="lazy" src="oldImages/VrDrivin4.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Drivin Road Signs" title="VR Drivin Road Signs">
+              </div>
+            </div>
+      </div>
+      
+    
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image">
+          <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+      </div>
+      </div>
+
+
+
+      <!-- Container (XR Terra Section) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">XR TERRA COURSE WORK</h3>
+        <p class="w3-center"><em>XR Terra Course Work</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <br>
+            <video loading="lazy" width="85%" poster="oldImages/xrTerraGif.gif" controls alt="XR Terra Classwork" title="Click to play">
+              <source src="oldImages/XrTerra.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        
+            <!-- DO NOT Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p><b>Click the GIF for higher quality video</b>. <a href="https://www.xrterra.com/" target=”_blank”>XR Terra</a> is an online training platform who offer live classroom training in VR.  I took part in their <a href="https://www.xrterra.com/vr-developer-foundations/" target=”_blank”>VR Developer Foundations</a>  4 week course, and this was the result. </p>
+              <p>Using Unity, C# and VR toolkits and libraries we created a scene with VR interactions and locomotion, also utilising Animations, character controllers and movement.</p>
+              <p>In the video here (please click to play), you can see the interactable control panel which is also grabable, this triggers an animation that leads to the creation of an object. 
+                This object can then be assigned a material and then using another button, destroyed with particle effects.  Another level controls the poistion of the sun, changing the scenes lighting.  You can also pick up and eat half an apple :-)</p>
+            </div>
+          </div>
+          
+              <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+              <div class="w3-row-padding w3-center w3-hide-small w3-hide-medium">
+                <div class="w3-col m3">
+                  <img loading="lazy" src="oldImages/xrTerra1.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Classroom setting" title="VR Classroom setting">
+                </div>
+            
+                <div class="w3-col m3">
+                  <img loading="lazy" src="oldImages/xrTerra2.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Lab Room setting" title="VR Lab Room setting">
+                </div>
+            
+                <div class="w3-col m3">
+                  <img loading="lazy" src="oldImages/xrTerra3.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="A Giant Duck" title="A Giant Duck">
+                </div>
+            
+                <div class="w3-col m3">
+                  <img loading="lazy" src="oldImages/xrTerra4.png" style="width:100%" width="217" height="135"  onclick="onClick(this)" class="w3-hover-opacity" alt="VR Settings Cotrol Panel" title="VR Settings Cotrol Panel">
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+
+              <!-- Container (AR Course) -->
+          <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+            <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">AUGMENTED REALITY</h3>
+            <p class="w3-center"><em>Interacting With The Real World</em></p>
+            <div class="w3-row">
+              <div class="w3-col m6 w3-center w3-padding-large">
+                <video loading="lazy" width="90%" poster="oldImages/AR_Car.gif"  alt="Augmented Reality Car on Table" title="Augmented Reality">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+                <!-- DO NOT Hide this text on small devices -->
+                <div class="w3-col m6 w3-padding-large">
+                  <p>Although VR is my main focus, I'm also interested in experimenting with Augmented Reality within Unity's AR Foundation Package.</p>
+                  <p>In the GIF shown here, I'm utilising the mobile phones camera to detect the ground plane, then tracking the position of the 3d model around this result.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container (2D Games) -->
+          <div class="w3-content w3-container w3-padding-64">
+            <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">2D SIDE SCROLLER</h3>
+            <p class="w3-center"><em>A Super Mario Clone</em></p>
+            <div class="w3-row">
+              <div class="w3-col m6 w3-center w3-padding-large">
+                <video loading="lazy" width="90%" poster="oldImages/SupCherGhoGif.gif"  alt="A Super Mario Clone" title="Super Cherry Ghost">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+            
+                <!-- DO NOT Hide this text on small devices -->
+                <div class="w3-col m6 w3-padding-large">
+                  <p>Of course, not everything is in VR! As a right of passage it's almost compulsory to make a working demo of a Mario-like 2D side scrolling game.  Mine's called 'Super Cherry Ghost.'</p>
+                  <p>Built using the Corgi Engine within Unity, I was quickly able to create a functional prototype complete with paralax backgrounds and enemies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br> 
+    </div>
+
+        <!-- Container (Example Projects) -->
+        <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+          <div class="animImgDiv">
+            <div class="flex-container">
+              <div>
+                <a href="portfolio.html"><img src="oldImages/VR_Link.png" style="--f:.12;--r:1%" class="imgAnim" alt="VR projects link" title="Open VR projects page"></a>
+              </div>
+              <div>
+                <a href="hardware.html"><img src="oldImages/hard_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Hardware projects link" title="Open Hardware projects page"></a>
+              </div>
+              <div>
+                <a href="webdev.html"><img src="oldImages/webdev_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Web Dev projects link" title="Open Web Dev projects page"></a>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <br><br>
+      </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 ">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <a class="w3-hover-opacity" target="_blank" href="https://bloghoskins.blogspot.com/"> <img src="oldImages/bloggerIcon.png" width="20.58" height="24" alt="blogspot icon" title="Link to Blog"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://github.com/gary909"> <img src="oldImages/github-mark-white.svg" width="23" height="23" alt="blogspot icon" title="Link to GitHub"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://www.codewars.com/users/gary909"> <img src="oldImages/codewars_icon.png" width="23" height="23" alt="Codewars icon" title="Link to Codewars"></a>
+      <a class="fa fa-linkedin w3-hover-opacity" target="_blank" href="https://www.linkedin.com/in/gary-white-3a779a51/" alt="LinkedIn icon" title="LinkedIn Link"></a>
+
+    </div>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookieConsent">
+    <div class="cookie-container">
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="about.html#cookies-info">Learn more</a></p>
+        <div>
+            <button id="acceptCookies">Got it!</button>
+            <button id="declineCookies">No</button>
+        </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

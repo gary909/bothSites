@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sunset Studios</title>
+    <link rel="icon" type="image/x-icon" href="/oldImages/favicon.ico">
+    <link rel="stylesheet" href="oldStyles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="oldIndex.html" class="w3-bar-item w3-button NaVFontCol">HOME</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol"></i>WEB</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-small NaVFontCol">ABOUT</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      </a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="portfolio.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">VR</a>
+      <a href="hardware.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">HARDWARE</a>
+      <a href="webdev.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">WEB </a>
+      <a href="about.html" class="w3-bar-item w3-button NaVFontCol" onclick="toggleFunction()">ABOUT</a>      
+    </div>
+  </div>
+
+  <div id="home"><br><br></div>
+
+  
+  <!-- First Parallax Image with Logo Text -->
+  <div loading="eager" class="bgimg-4 w3-display-container w3-opacity-min" alt="Digital Sunset Studios Projects" title="Digital Sunset Studios Projects">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-animate-opacity">WEB DEV PROJECTS<span class="w3-hide-small"></span></span>
+    </div>
+  </div>
+
+      
+  <!-- Container (Doom Armour Section) -->
+  <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+    <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">Doom Armour Calculator</h3>
+    <p class="w3-center"><em>Efficient Hit Point Calculation</em></p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <img width="100%" src="oldImages/doomAppMov.gif" alt="Doom Armour App" title="Doom App">
+      </div>
+    
+        <!-- Do Not Hide this text on small devices -->
+        <div class="w3-col m6 w3-padding-large">
+          <p>For one of my VR projects I needed an efficient way to calculate the amount of hit points removed
+            from both your health total, and if you have any, your armour total. Points should be removed from the armour amount first, and then the health. So if you have 100 health, 20 Armour, and a hit point is worth 30, you should be left with 90 health and 0 armour.
+          </p>
+          <p>The page is responsive & was created using pure HTML, CSS & JavaScript.  You can try it our <a href="https://digitalsunsetstudios.com/doomApp.html" target=”_blank”>here.</a></p>
+          
+          
+          <p>You can see the full code over on <a href="https://github.com/gary909/Kata/blob/main/armourExample/readme.md" target=”_blank”>GitHub.</a></p>
+      </div>
+      <br>
+
+      </div>
+
+            <!-- Container (Weather API Section) -->
+    <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+      <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">Weather App</h3>
+      <p class="w3-center"><em>API Connected weather App</em></p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <img width="100%" src="images\weatherAppGif.gif" alt="Weather App" title="Weather App">
+        </div>
+      
+          <!-- Do Not Hide this text on small devices -->
+          <div class="w3-col m6 w3-padding-large">
+            <p>
+              Here we are grabbing the weather results from the user selected area and as well as returning the weather,
+               we're also offering advice on the appropriate atire (which changes depending on the tempturature).
+            </p>
+            <p>We're making use of the openweathermap.org API to 
+              return these results.</p>
+
+            <p>You can see the full code over on <a href="https://github.com/gary909/WeatherApp/blob/main/README.md" target=”_blank”>GitHub.</a></p>
+        </div>
+        <br>
+          <br>
+      </div>
+
+      <!-- Container (Audiogram Section) -->
+    <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+      <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">AUDIOGRAM</h3>
+      <p class="w3-center"><em>Audio Recording Social Media App</em></p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <img width="60%" src="oldImages/audiogramGIF.gif" alt="Audiogram App" title="Audiogram App">
+        </div>
+      
+          <!-- Do Not Hide this text on small devices -->
+          <div class="w3-col m6 w3-padding-large">
+            <p>The audio-sharing social-network. The user is limited to 10 seconds recording time and doesn't have the ability to delete their messages. 
+              Features secure log-in and the option to post on other users recordings.</p>
+            <p>This was our final project as part of the Ironhack Berlin Web Dev course. It was built using the following;</p>
+            <p>React, Node.js, Express.js, MongoDB, Bootstrap, HTML & CSS</p>
+            
+            
+            <p>You can see the full code over on <a href="https://github.com/gary909/audiogramm" target=”_blank”>GitHub.</a></p>
+        </div>
+        <br>
+          <br>
+      </div>
+
+      <!-- Container (PETS OF BERLIN) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">PETS OF BERLIN APP</h3>
+        <p class="w3-center"><em>Location Based Pet Breeding App</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <video loading="lazy" width="60%" poster="oldImages/PetsOfBerlinGif.gif"  alt="Pets Of Berlin App" title="PEts Of Berlin App">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        
+            <!-- DO NOT Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>Help your guinea pig to find new friends and breeding partners. This website was built as our second project for the 
+                Ironhack Berlin web development bootcamp.</p>
+              <p>Create a secure account and then tag your location and let other users see your animals details.</p>
+              <p>It primarily uses the Google Maps API and was built using Node.js, Express.js, Handlebars, MongoDB, jQuery, Bootstrap, HTML & CSS</p>
+              <p>You can see the full code over on <a href="https://github.com/sylviebe/pets-of-berlin" target=”_blank”>GitHub.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Container (TO DO LIST) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">TO DO LIST</h3>
+        <p class="w3-center"><em>Angular TODO List App</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <video loading="lazy" width="90%" poster="oldImages/todoApp.gif"  alt="TODO List App" title="TODO List App">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        
+            <!-- DO NOT Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>This is a classic 'TODO' list app that was created using Angular and using the JSON placeholder API to gather the TODOs.</p>
+              <p>You can see the full code over on <a href="https://github.com/gary909/angular-todolist" target=”_blank”>GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Container (BREXIT Game) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <h3 class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-opacity-min">BREXIT GAME</h3>
+        <p class="w3-center"><em>Phaser Fun</em></p>
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <video loading="lazy" width="90%" poster="oldImages/BrexitGameGif2.gif"  alt="A Game Of Brexit" title="Brexit Game">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        
+            <!-- DO NOT Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+              <p>The game you can't win! Designed to be overly-complicated, you need to decide if the anti-EU headline is true or false by
+                collecting a 'yes' or 'no' tick, all the while balancing public anger and gullibility by collecting pints of beer.  Every correct guess spawns an English
+                flag which if you accidentally collect will end the game ("Avoid Nationalism!").
+              </p>
+              <p>This game was created using the Phaser library and Javascript for the first project of Ironhack Berlin.</p>
+              <p>You can see the code over on <a href="https://github.com/gary909/BrexitGame" target=”_blank”>GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+      <!-- Container (Example Projects) -->
+      <div class="w3-content w3-container w3-padding-64 DssBG" id="about">
+        <div class="animImgDiv">
+          <div class="flex-container">
+            <div>
+              <a href="portfolio.html"><img src="oldImages/VR_Link.png" style="--f:.12;--r:1%" class="imgAnim" alt="VR projects link" title="Open VR projects page"></a>
+            </div>
+            <div>
+              <a href="hardware.html"><img src="oldImages/hard_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Hardware projects link" title="Open Hardware projects page"></a>
+            </div>
+            <div>
+              <a href="webdev.html"><img src="oldImages/webdev_link.png" style="--f:.12;--r:1%" class="imgAnim" alt="Web Dev projects link" title="Open Web Dev projects page"></a>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 ">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <a class="w3-hover-opacity" target="_blank" href="https://bloghoskins.blogspot.com/"> <img src="oldImages/bloggerIcon.png" width="20.58" height="24" alt="blogspot icon" title="Link to Blog"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://github.com/gary909"> <img src="oldImages/github-mark-white.svg" width="23" height="23" alt="blogspot icon" title="Link to GitHub"></a>
+      <a class="w3-hover-opacity" target="_blank" href="https://www.codewars.com/users/gary909"> <img src="oldImages/codewars_icon.png" width="23" height="23" alt="Codewars icon" title="Link to Codewars"></a>
+      <a class="fa fa-linkedin w3-hover-opacity" target="_blank" href="https://www.linkedin.com/in/gary-white-3a779a51/" alt="LinkedIn icon" title="LinkedIn Link"></a>
+
+    </div>
+  </footer>
+  <!-- Cookie Consent -->
+  <div id="cookieConsent">
+    <div class="cookie-container">
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="about.html#cookies-info">Learn more</a></p>
+        <div>
+            <button id="acceptCookies">Got it!</button>
+            <button id="declineCookies">No</button>
+        </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
